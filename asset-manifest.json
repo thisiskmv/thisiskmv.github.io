@@ -1,28 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.f8c44a63.css",
-    "main.js": "/static/js/main.86d0b29a.js",
+    "main.js": "/static/js/main.6358fd2a.js",
     "static/js/787.b9062d9f.chunk.js": "/static/js/787.b9062d9f.chunk.js",
-    "static/media/nykaa.mp4": "/static/media/nykaa.c13f31a99e1a8810dab5.mp4",
-    "static/media/zomato.mp4": "/static/media/zomato.7345d6af573beabd251e.mp4",
-    "static/media/flixy.mp4": "/static/media/flixy.02378a7a367c38fd005e.mp4",
-    "static/media/esqido.mp4": "/static/media/esqido.f7015ac60fa8af39c176.mp4",
-    "static/media/hebeboutique.mp4": "/static/media/hebeboutique.56a4ed492a42e1177fc2.mp4",
     "static/media/Fabally.png": "/static/media/Fabally.2e313eb329d13a297fd6.png",
     "static/media/Spotify.png": "/static/media/Spotify.a8b519d2e9c902984981.png",
     "static/media/instagram.png": "/static/media/instagram.eef87cd76185bd46f9cc.png",
     "static/media/KAMAL_VERMA.pdf": "/static/media/KAMAL_VERMA.477cb586deef124611dc.pdf",
     "static/media/Electon.png": "/static/media/Electon.8a460c96041dee3d3b47.png",
     "static/media/thisiskmv.png": "/static/media/thisiskmv.6d0ad275f837ad729011.png",
-    "static/media/logo.png": "/static/media/logo.134ea3d574f678ad06f2.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.f8c44a63.css.map": "/static/css/main.f8c44a63.css.map",
-    "main.86d0b29a.js.map": "/static/js/main.86d0b29a.js.map",
+    "main.6358fd2a.js.map": "/static/js/main.6358fd2a.js.map",
     "787.b9062d9f.chunk.js.map": "/static/js/787.b9062d9f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f8c44a63.css",
-    "static/js/main.86d0b29a.js"
+    "static/js/main.6358fd2a.js"
   ]
 }
