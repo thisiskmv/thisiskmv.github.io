@@ -1,30 +1,47 @@
-import { Box,  Button,  Slide, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Slide,
+  Typography,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import LinearDeterminate from "./ProgressComp";
-import logo from "../../media/logo.png";
+
 import "./Navbar.css";
 import { details } from "../../details";
 import Scroll from "react-scroll-to-element";
+import KAMAL_VERMA from "../../media/KAMAL_VERMA.pdf";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import { Link } from "react-scroll";
 
-
-const Navbar = ({scollHandle}) => {
-    const [checked,setChecked]= useState(false);
+const Navbar = ({ scollHandle }) => {
+  const [checked, setChecked] = useState(false);
   const [hoverEffect, SetHoverEffect] = useState(0);
   const [scrolled, setScrolled] = useState(0);
+  const [open, setOpen] = useState(false);
 
-  const introLoaded=()=>{
-    setTimeout(()=>{
-        setChecked(true);
+  const handleDrawerToggle = () => {
+    setOpen(!open);
+  };
 
-    },600)
-}
-    useEffect(()=>{
-        introLoaded();
-    },[])
+  const introLoaded = () => {
+    setTimeout(() => {
+      setChecked(true);
+    }, 600);
+  };
+  useEffect(() => {
+    introLoaded();
+  }, []);
 
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1tqO6N7mu2UwSY8CxzUEoCThGq8uA49Fv/view?usp=sharing"
+      "https://drive.google.com/file/d/15-klxyqi91K0pTKcdSluMkUY8COoySgM/view?usp=sharing",
+      "_blank"
     );
   };
 
@@ -32,9 +49,14 @@ const Navbar = ({scollHandle}) => {
     setScrolled(document.documentElement.scrollHeight);
   });
 
-  
+  const topwindows = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
-    <Box 
+    <Box
       id="nav-menu"
       className={scrolled >= 100 ? "navbarboxShadow" : ""}
       sx={{
@@ -44,7 +66,7 @@ const Navbar = ({scollHandle}) => {
         padding: "5px 1%",
         position: "sticky",
         top: "0%",
-        zIndex:"10"
+        zIndex: "10",
       }}
     >
       <Box
@@ -57,61 +79,127 @@ const Navbar = ({scollHandle}) => {
           color: "white",
         }}
       >
-        {/* <img className="logoImage" height={"70px"} width={"75px"} src={logo} /> */}
-        
+        <Typography
+          sx={{
+            color: "#008F11",
+            fontFamily: "Poppins",
+            fontSize: "2rem",
+            fontWeight: "500",
+            textShadow: "0 10px 10px white",
+          }}
+          variant="h1"
+        ></Typography>
       </Box>
-      <Box  className="logoBox" sx={{ display: "none" }}>
-        <img height={"70px"} width={"75px"} src={logo} />
-      </Box>
+      <Box className="logoBox" sx={{ display: "none" }}></Box>
       <Box
         className="navbar-part-2"
+        p="1rem"
         sx={{
           display: "flex",
           width: "80%",
           color: "white",
-          padding: "15px",
           justifyContent: "space-between",
           alignItems: "center",
         }}
       >
-        {
-            details.navList.map((ele,index)=>{
-                return (
-                <Scroll offset={-150} type="class" element={details.className[index]}>
-                <Slide key={index} direction="down" in={checked}>
-
+        {details.navList.map((ele, index) => {
+          return (
+            <Scroll
+              offset={-150}
+              type="class"
+              element={details.className[index]}
+            >
+              <Slide key={index} direction="down" in={checked}>
                 <Box
-                sx={{ cursor: "pointer" }}
-                onMouseOut={() => {
+                  className="navbarList"
+                  sx={{ cursor: "pointer" }}
+                  onMouseOut={() => {
                     SetHoverEffect(0);
                   }}
-                  onMouseOver={() => SetHoverEffect(index+1)}
-                    >
-                <Typography className={ele?.val2} variant="h5" sx={{fontSize:"1.1rem" }}>{ele.val1}</Typography>
-                {hoverEffect == index+1 ? (
+                  onMouseOver={() => SetHoverEffect(index + 1)}
+                >
+                  {console.log(ele)}
+                  <Typography
+                    className={ele?.val2}
+                    variant="h5"
+                    sx={{
+                      fontSize: "1.1rem",
+                      fontFamily: "Poppins",
+                      // color: "#00FF41",
+                    }}
+                  >
+                    {ele.val1}
+                  </Typography>
+                  {hoverEffect == index + 1 ? (
                     <LinearDeterminate color={"white"} />
-                    ) : (
-                      <Box sx={{ height: "4px" }}></Box>
-                      )}
+                  ) : (
+                    <Box sx={{ height: "4px" }}></Box>
+                  )}
                 </Box>
-            </Slide>
-                </Scroll>)
-            })
-        }
+              </Slide>
+            </Scroll>
+          );
+        })}
 
-       
-        <Box onClick={openResume}>
-          <Button variant="outlined"
-           id="resume-button-1"
+        <Box className="nav-link resume" onClick={openResume}>
+          <a href={KAMAL_VERMA} download="Kamal-Verma-Resume">
+            <Button
+              variant="outlined"
+              download={KAMAL_VERMA}
+              id="resume-button-1"
+              sx={{
+                border: "1px solid #008F11",
+                // color: "#00FF41",
+                color: "white",
+                fontSize: "0.8rem",
+                fontFamily: "Poppins",
+              }}
+            >
+              Resume
+            </Button>
+          </a>
+
+          <LinearDeterminate color={"transparent"} />
+        </Box>
+
+        <Box className="ham" sx={{ display: "none", color: "#00FF41" }}>
+          <MenuOutlinedIcon onClick={handleDrawerToggle} />
+          <Drawer
             sx={{
-              // border: "1px solid #64ffda",
-             
-              border: "1px solid black",
-              boxShadow:"0 0 10px green",
-              color: "white",
-              fontSize: "0.8rem",
-            }}>Resume</Button>
-          <LinearDeterminate color={"transparent"}/>
+              width: 300, // Set the desired width
+              flexShrink: 0,
+              "& .MuiDrawer-paper": {
+                width: 300, // Set the desired width
+                backgroundColor: "#07160f", // Set the desired background color
+                color: "white",
+              },
+            }}
+            variant="temporary"
+            anchor="right"
+            open={open}
+            onClose={handleDrawerToggle}
+          >
+            <List sx={{ marginTop: "50px" }}>
+              {details.navList.map((ele, index) => (
+                <ListItem button key={index}>
+                  <Link
+                    activeClass="active"
+                    to={details.className[index]}
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={500}
+                    onClick={handleDrawerToggle}
+                  >
+                    <ListItemText
+                      primary={ele.val1}
+                      sx={{ textAlign: "center" }}
+                    />
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          </Drawer>
         </Box>
       </Box>
     </Box>

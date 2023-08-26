@@ -1,17 +1,11 @@
-
-
-
-
-
-
-.profileImage{
+.imageContainer{
    
     transition: 500ms linear;
     
 }
 
 
-.profileImage:hover{
+.imageContainer:hover{
     filter: contrast(10%);
     filter: grayscale(0%)!important;
     transform: scale(1.1);
@@ -19,12 +13,10 @@
 
 
 
-@media screen and (max-width:950px) {
-    .aboutContainer{
-        grid-template-columns: 1fr!important;
-    }
-    .profileImage{
-        width: 100!important;
+@media screen and (max-width:830px) {
+    #about{
+        display: grid;
+        width: 100%!important;
     }
     .imageContainer{
         justify-content: center!important;
@@ -37,5 +29,30 @@
         top: -18px!important;
         left: 35%!important;
         padding: 1%!important;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #about{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .imageContainer{
+        justify-content: center!important;
+    }
+    .aboutText{
+        text-align: center!important;
+    }
+    .aboutHeading{
+        font-size: 1.5rem!important;
+        top: -18px!important;
+        left: 35%!important;
+        padding: 1%!important;
+    }
+    #resumeBtn button{
+        margin: auto!important;
     }
 }

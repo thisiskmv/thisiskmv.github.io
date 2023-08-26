@@ -1,8 +1,9 @@
-import { Box, Button,  Typography, Zoom } from "@mui/material";
-import React, {  useState } from "react";
-import thisiskmv from "../../media/thisiskmv.png"
-import LinearDeterminate from "../MiniComponent/ProgressComp";
+import { Box, Button, Slide, Typography, Zoom, Grid } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import "./About.css";
+import thisiskmv from "../../media/thisiskmv.png";
+import LinearDeterminate from "../MiniComponent/ProgressComp";
+import KAMAL_VERMA from "../../media/KAMAL_VERMA.pdf";
 
 const About = () => {
   const [checked1, setChecked1] = useState(false);
@@ -21,93 +22,110 @@ const About = () => {
       setChecked2(true);
     }, 800);
   }
+
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1tqO6N7mu2UwSY8CxzUEoCThGq8uA49Fv/view?usp=sharing"
+      "https://drive.google.com/file/d/15-klxyqi91K0pTKcdSluMkUY8COoySgM/view?usp=sharing",
+      "_blank"
     );
   };
 
   return (
-    <Box
-    id="about" className="about section"
-      sx={{
-        width: "80%",
-        margin: "10% auto",
-        padding: "0% 10px",
-        display: "grid",
-        gridTemplateColumns: "repeat(2,1fr)",
-        gap: "25px",
-      }}
+    <Grid
+      container
+      id="about"
+      className="about section"
+      sx={{ width: "80%", margin: "10% auto", padding: "0% 10px" }}
+      spacing={2}
     >
-      <Box sx={{ position: "relative" }}>
-        <Zoom in={checked1}>
+      <Grid item xs={12} sm={6} md={6} sx={{ margin: "auto" }}>
+        <Box
+          sx={{ borderTop: "2px solid rgb(35, 53, 84)", position: "relative" }}
+        >
           <Typography
             className="aboutHeading"
             variant="h4"
             sx={{
-              color: "rgb(191,201,232)",
-            //   backgroundColor: "rgb(11,24,47)",
+              backgroundColor: "rgb(11, 24, 47)",
               position: "absolute",
               top: "-25px",
               padding: "0% 5% 0% 0%",
+              fontFamily: "Poppins",
+              color: "white",
             }}
           >
             About Me
           </Typography>
-        </Zoom>
-        <Zoom in={checked2}>
           <Typography
+            id="user-detail-intro"
             className="aboutText"
-            sx={{ marginTop: "8%", color: "rgb(136,146,176)" }}
-          >
-            Hello! My name is
-            <span style={{ color: "white" }}> Kamal Verma</span> and I enjoy
-            creating things that live on the internet. My interest in computers
-            and technology started back in when I was in my 6th grade and my
-            father brought me a computer and after that day i kept doing lot of
-            new things on that.
-            <br />
-            <br />
-            After my graduation i was finding something to start my carrer in
-            tech field and gratefully i came into know about{" "}
-            <span style={{ color: "white" }}>Web Development</span> and started
-            my journey from there. Fast-forward to today, and I’ve worked in
-            many projects with lot of tech stacks.My main focus these days is
-            building accessible, inclusive products.
-          </Typography>
-        </Zoom>
-        <Box marginTop="1.5rem" onClick={openResume}>
-          <Button variant="outlined"
-          id="resume-button-2"
             sx={{
-              // border: "1px solid #64ffda",
-              
-              border: "1px solid black",
-              boxShadow:"0 0 10px green",
-              color: "white",
-              fontSize: "0.8rem",
-            }}>Resume</Button>
-          <LinearDeterminate color={"transparent"}/>
+              marginTop: "8%",
+              color: "rgb(136,146,176)",
+              fontFamily: "Poppins",
+            }}
+          >
+            Hello! My name is{" "}
+            <span style={{ color: "white" }}>Kamal Verma</span> and I enjoy
+            creating things that live on the internet. My interest in computers
+            and technology started back when I was in my 6th grade and my father
+            brought me a computer, and since then, I've been exploring various
+            aspects of it.
+            <br />
+            <br />
+            After my graduation, I discovered{" "}
+            <span style={{ color: "white" }}>Web Development</span> and started
+            my journey from there. Fast-forward to today, and I’ve worked on
+            many projects with various tech stacks like JavaScript, Node.js,
+            Express.js, and MongoDB. My main focus these days is building
+            accessible and inclusive products. I'm an enthusiastic Full Stack
+            Developer, a lifelong learner, and skilled in front-end Web
+            Development with high adaptability to learn new technologies and
+            attention to detail.
+          </Typography>
+          <Box
+            id="resumeBtn"
+            onClick={openResume}
+            marginTop="1.5rem"
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <Button
+              variant="outlined"
+              href={KAMAL_VERMA}
+              download="Kamal-Verma-Resume"
+              id="resume-button-2"
+              sx={{
+                border: "1px solid #008F11",
+                color: "white",
+                fontSize: "0.8rem",
+                fontFamily: "Poppins",
+                margin: "auto",
+              }}
+            >
+              Resume
+            </Button>
+            <LinearDeterminate color={"transparent"} />
+          </Box>
         </Box>
-      </Box>
-      <Zoom in={checked2}>
+      </Grid>
+      <Grid item xs={12} sm={6} sx={{ margin: "auto" }}>
         <Box
           className="imageContainer"
-          sx={{ display: "grid", justifyContent: "right" }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
           <img
-          className="home-img"
-            // className="profileImage"
+            className="home-img"
             style={{ display: "block", margin: "auto", borderRadius: "5px" }}
-            width={"40%"}
+            width={"60%"}
             src={thisiskmv}
           />
         </Box>
-       
-      </Zoom>
-      <div id="About"></div>
-    </Box>
-    // 151951
+      </Grid>
+    </Grid>
   );
 };
 

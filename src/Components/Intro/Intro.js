@@ -53,7 +53,7 @@ const Intro = () => {
             sx={{
               color: "whiteSmoke",
               fontFamily: "arial",
-              textShadow: "0 10px 10px black",
+              textShadow: "0 8px 8px green",
               fontSize: "5.5rem",
               fontWeight: "bold",
             }}

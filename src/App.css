@@ -6,10 +6,10 @@
 }
 
 body{
-  /* background-color: rgb(11,24,47); */
+  background-color: rgb(11,24,47);
   /* background-color: rgba(11, 24, 47, 0.911); */
   /* background-image: linear-gradient(to bottom right, black,gray); */
-  background-image: linear-gradient(black,rgba(11, 24, 47, 0.753), black);
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.966),rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.966)); */
 
   overflow-x: hidden;
   font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
