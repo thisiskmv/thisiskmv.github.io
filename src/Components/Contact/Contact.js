@@ -94,19 +94,7 @@ const Contact = () => {
           >
             <i className="fa-brands fa-github"></i> thisiskmv
           </a>
-          <a
-            id="contact-linkedin"
-            className="socialLogo"
-            target={"_blank"}
-            href={details.linkedInLink}
-            style={{
-              textDecoration: "none",
-              color: "white",
-              fontSize: "1.7rem",
-            }}
-          >
-            <i className="fa-brands fa-linkedin"></i> Kamal Verma
-          </a>
+        
           <a
             id="contact-phone"
             className="socialLogo"
