@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3d86f6e5.css",
-    "main.js": "/static/js/main.bd554e8f.js",
+    "main.js": "/static/js/main.ddfd58a1.js",
     "static/media/adventour.png": "/static/media/adventour.cc0eceb67ed1ec30a4c8.png",
     "static/media/expedia.png": "/static/media/expedia.36cc39d2e5c87052a01f.png",
     "static/media/kamal-verma-resume.pdf": "/static/media/kamal-verma-resume.5095d821c3dfc1e4469b.pdf",
@@ -11,10 +11,10 @@
     "static/media/kmv.jpg": "/static/media/kmv.35b0d2e43158d67c2fb1.jpg",
     "index.html": "/index.html",
     "main.3d86f6e5.css.map": "/static/css/main.3d86f6e5.css.map",
-    "main.bd554e8f.js.map": "/static/js/main.bd554e8f.js.map"
+    "main.ddfd58a1.js.map": "/static/js/main.ddfd58a1.js.map"
   },
   "entrypoints": [
     "static/css/main.3d86f6e5.css",
-    "static/js/main.bd554e8f.js"
+    "static/js/main.ddfd58a1.js"
   ]
 }
