@@ -225,7 +225,7 @@ function App() {
               </li>
               <li onClick={openResume}>
                 <a
-                  href={resume}
+                  // href={resume}
                   download="kamal-verma-resume"
                   className="navbar-link"
                 >
@@ -411,8 +411,8 @@ function App() {
               </p>
               <div className="btn-group" onClick={openResume}>
                 {/* <button className="btn btn-secondary">Hire me</button> */}
-                <a href={resume} download="kamal-verma-resume">
-                  <button className="btn btn-primary" download={resume}>
+                <a  download="kamal-verma-resume">
+                  <button className="btn btn-primary" >
                     Download cv
                   </button>
                 </a>
@@ -724,21 +724,21 @@ function App() {
                 <div className="project-card">
                   <figure className="card-banner">
                     <img
-                      src={require("./images/images/adventour.png")}
+                      src={require("./images/pharmaeasy.png")}
                       className="w-100"
                       alt="On a Blue background, a Wacom and a mouse."
                     />
                   </figure>
                   <div className="card-content">
                     <a
-                      href="https://effulgent-crostata-f624a5.netlify.app/"
+                      href="https://pharmeasy-web-site-clone.netlify.app"
                       target="_blank"
                       className="h4 card-title"
                     >
-                      Expedia Travel
+                      PharmaEasy
                     </a>
                     <a
-                      href="https://github.com/seakash1204/expedia_clone"
+                      href="https://github.com/VinodKumarGgithub/PharmaEasy"
                       target="_blank"
                       className="publish-date"
                       dateTime="2022-04"
@@ -759,14 +759,14 @@ function App() {
                   </figure>
                   <div className="card-content">
                     <a
-                      href="https://effulgent-crostata-f624a5.netlify.app/"
+                      href="https://faballey-web.netlify.app/"
                       target="_blank"
                       className="h4 card-title"
                     >
-                      Expedia Travel
+                      Faballey Clothing Brand
                     </a>
                     <a
-                      href="https://github.com/seakash1204/expedia_clone"
+                      href="https://github.com/BabyGupta05/faballey"
                       target="_blank"
                       className="publish-date"
                       dateTime="2022-04"
@@ -787,14 +787,14 @@ function App() {
                   </figure>
                   <div className="card-content">
                     <a
-                      href="http://adventour-app.vercel.app/"
+                      href="http://spotify-two-virid.vercel.app/"
                       target="_blank"
                       className="h4 card-title"
                     >
-                      Adventour
+                      Spotify Music App
                     </a>
                     <a
-                      href="https://github.com/Bharat-Shaw/Adventour"
+                      href="https://github.com/thisiskmv/Spotify-Clone"
                       target="_blank"
                       className="publish-date"
                     >
@@ -835,7 +835,7 @@ function App() {
                 <div className="project-card">
                   <figure className="card-banner">
                     <img
-                      src={require("./images/images/portfolio.png")}
+                      src={require("./images/kmvPortfolio.png")}
                       className="w-100"
                       alt="Blue digital watch on a dark liver background."
                     />
@@ -845,7 +845,7 @@ function App() {
                       Portfolio
                     </a>
                     <a
-                      href="https://github.com/iamFaizee/iamFaizee.github.io"
+                      href="https://github.com/thisiskmv/thisiskmv.github.io"
                       target="_blank"
                       className="publish-date"
                       dateTime="2022-04"
@@ -867,14 +867,14 @@ function App() {
                   </figure>
                   <div className="card-content">
                     <a
-                      href="https://dreamy-peony-b35dcc.netlify.app/"
+                      href="https://electon-abhi21121211.vercel.app/"
                       target="_blank"
                       className="h4 card-title"
                     >
-                      Big Basket
+                      Electon Website
                     </a>
                     <a
-                      href="https://github.com/kunalgoyat999/bigbasket"
+                      href="https://github.com/thisiskmv/Electon-clone"
                       target="_blank"
                       className="publish-date"
                       dateTime="2022-04"
